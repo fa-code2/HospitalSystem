@@ -2,6 +2,13 @@
 
 A comprehensive web-based patient record management system built with Flask and SQLite. This system allows healthcare facilities to efficiently manage patient information, including personal details, medical history, and emergency contacts.
 
+---
+
+## 📸 Screenshots
+![Dashboard Screenshot](assets/screenshot.png)
+
+---
+
 ## ✨ Features
 
 - **Patient Registration**: Complete patient intake form with validation
