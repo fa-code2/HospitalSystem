@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Patient Record System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🏥 MediCare Hospital</h1>
+            <p class="subtitle">Patient Record Management System</p>
+        </header>
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="{{ url_for('home') }}" class="nav-link active">Home</a></li>
+                <li><a href="{{ url_for('patient_form') }}" class="nav-link">Add Patient</a></li>
+                <li><a href="{{ url_for('view_patients') }}" class="nav-link">View Records</a></li>
+                <li><a href="#" class="nav-link">Reports</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <div class="welcome-section">
+                <h2>Welcome to Patient Record System</h2>
+                <p>Manage patient information efficiently and securely</p>
+            </div>
+
+            <div class="dashboard">
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-info">
+                        <h3>Total Patients</h3>
+                        <p class="stat-number">1,247</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">📋</div>
+                    <div class="stat-info">
+                        <h3>Today's Appointments</h3>
+                        <p class="stat-number">23</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🏥</div>
+                    <div class="stat-info">
+                        <h3>Active Doctors</h3>
+                        <p class="stat-number">15</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🚨</div>
+                    <div class="stat-info">
+                        <h3>Emergency Cases</h3>
+                        <p class="stat-number">3</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quick-actions">
+                <h3>Quick Actions</h3>
+                <div class="action-buttons">
+                    <a href="{{ url_for('patient_form') }}" class="action-btn primary">
+                        <span class="btn-icon">➕</span>
+                        Add New Patient
+                    </a>
+                    <a href="#" class="action-btn secondary">
+                        <span class="btn-icon">🔍</span>
+                        Search Records
+                    </a>
+                    <a href="#" class="action-btn secondary">
+                        <span class="btn-icon">📊</span>
+                        Generate Report
+                    </a>
+                    <a href="#" class="action-btn secondary">
+                        <span class="btn-icon">⚙️</span>
+                        Settings
+                    </a>
+                </div>
+            </div>
+
+            <div class="recent-activity">
+                <h3>Recent Activity</h3>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">👤</div>
+                        <div class="activity-details">
+                            <p><strong>John Doe</strong> - New patient registered</p>
+                            <span class="activity-time">2 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">📝</div>
+                        <div class="activity-details">
+                            <p><strong>Sarah Johnson</strong> - Medical record updated</p>
+                            <span class="activity-time">4 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">💊</div>
+                        <div class="activity-details">
+                            <p><strong>Michael Smith</strong> - Prescription added</p>
+                            <span class="activity-time">6 hours ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 MediCare Hospital. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

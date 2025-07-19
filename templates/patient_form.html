@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Patient - Hospital Patient Record System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🏥 MediCare Hospital</h1>
+            <p class="subtitle">Patient Record Management System</p>
+        </header>
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="{{ url_for('home') }}" class="nav-link">Home</a></li>
+                <li><a href="{{ url_for('patient_form') }}" class="nav-link active">Add Patient</a></li>
+                <li><a href="{{ url_for('view_patients') }}" class="nav-link">View Records</a></li>
+                <li><a href="#" class="nav-link">Reports</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <div class="form-header">
+                <h2>Add New Patient</h2>
+                <p>Please fill in all required information</p>
+            </div>
+
+            <form class="patient-form" method="POST" action="{{ url_for('patient_form') }}">
+                <div class="form-section">
+                    <h3>Personal Information</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dateOfBirth">Date of Birth *</label>
+                            <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender *</label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="bloodType">Blood Type</label>
+                            <select id="bloodType" name="bloodType">
+                                <option value="">Select Blood Type</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="maritalStatus">Marital Status</label>
+                            <select id="maritalStatus" name="maritalStatus">
+                                <option value="">Select Status</option>
+                                <option value="single">Single</option>
+                                <option value="married">Married</option>
+                                <option value="divorced">Divorced</option>
+                                <option value="widowed">Widowed</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Contact Information</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="address">Address *</label>
+                            <textarea id="address" name="address" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City *</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State *</label>
+                            <input type="text" id="state" name="state" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="zipCode">ZIP Code *</label>
+                            <input type="text" id="zipCode" name="zipCode" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Emergency Contact</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="emergencyName">Emergency Contact Name *</label>
+                            <input type="text" id="emergencyName" name="emergencyName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="emergencyRelation">Relationship *</label>
+                            <input type="text" id="emergencyRelation" name="emergencyRelation" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="emergencyPhone">Emergency Contact Phone *</label>
+                            <input type="tel" id="emergencyPhone" name="emergencyPhone" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Medical Information</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="registered_id">Register number *</label>
+                            <input type="tel" id="patient_id" name="patient_id" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="primaryDoctor">Primary Doctor</label>
+                            <select id="primaryDoctor" name="primaryDoctor">
+                                <option value="">Select Doctor</option>
+                                <option value="dr-smith">Dr. Smith - General Medicine</option>
+                                <option value="dr-johnson">Dr. Johnson - Cardiology</option>
+                                <option value="dr-brown">Dr. Brown - Pediatrics</option>
+                                <option value="dr-davis">Dr. Davis - Orthopedics</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="insuranceProvider">Insurance Provider</label>
+                            <input type="text" id="insuranceProvider" name="insuranceProvider">
+                        </div>
+                        <div class="form-group">
+                            <label for="policyNumber">Policy Number</label>
+                            <input type="text" id="policyNumber" name="policyNumber">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="allergies">Known Allergies</label>
+                            <textarea id="allergies" name="allergies" rows="3" placeholder="List any known allergies..."></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="medications">Current Medications</label>
+                            <textarea id="medications" name="medications" rows="3" placeholder="List current medications..."></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="medicalHistory">Medical History</label>
+                            <textarea id="medicalHistory" name="medicalHistory" rows="4" placeholder="Brief medical history..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                   <button type="button" class="btn btn-secondary" onclick="window.location.href='{{ url_for('home') }}'">Cancel</button>
+                   <button type="reset" class="btn btn-secondary">Reset Form</button>
+                   <button type="submit" class="btn btn-primary">Add Patient</button>
+              </div>
+
+            </form>
+
+            {% if success %}
+            <div class="success-message">
+                <p>✅ Patient record has been successfully added!</p>
+            </div>
+            {% endif %}
+
+            {% if error %}
+            <div class="error-message">
+                <p>❌ Error: {{ error }}</p>
+            </div>
+            {% endif %}
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 MediCare Hospital. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

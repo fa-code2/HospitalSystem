@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+        th {
+            background-color: #f5f5f5;
+        }
+        .search-filter {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .search-input, .filter-select {
+            padding: 8px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏥 Patient Records</h1>
+
+        <div class="search-filter">
+            <input type="text" id="searchInput" placeholder="Search by name, phone, or ID..." class="search-input">
+            <select id="filterGender" class="filter-select">
+                <option value="">All Genders</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        {% if patients %}
+        <table id="patientsTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for patient in patients %}
+                <tr data-gender="{{ patient.gender|lower }}">
+                    <td>{{ patient.patient_id }}</td>
+                    <td>{{ patient.first_name }} {{ patient.last_name }}</td>
+                    <td>{{ patient.gender.title() }}</td>
+                    <td>{{ patient.phone }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>No patient records found.</p>
+        {% endif %}
+    </div>
+
+    <script>
+        // Search
+        document.getElementById('searchInput').addEventListener('input', function () {
+            const searchTerm = this.value.toLowerCase();
+            const rows = document.querySelectorAll('#patientsTable tbody tr');
+
+            rows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                row.style.display = text.includes(searchTerm) ? '' : 'none';
+            });
+        });
+
+        // Filter by gender
+        document.getElementById('filterGender').addEventListener('change', function () {
+            const gender = this.value.toLowerCase();
+            const rows = document.querySelectorAll('#patientsTable tbody tr');
+
+            rows.forEach(row => {
+                const rowGender = row.dataset.gender;
+                row.style.display = (gender === '' || rowGender === gender) ? '' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
