@@ -86,6 +86,12 @@ hospital-patient-record-system/
 ```
 
 ## 🗄️ Database Schema
+---
+
+## BASIC ER Diagram:
+![ER Diagram](assets/PATIENTS.png)
+
+---
 
 The system uses SQLite with the following patient table structure:
 
