@@ -19,6 +19,15 @@ A comprehensive web-based patient record management system built with Flask and 
 - **Emergency Contacts**: Store emergency contact information for each patient
 - **Medical Information**: Track allergies, medications, and medical history
 - **Secure Database**: SQLite database with proper data integrity
+---
+
+## 🛠️ Tech Stack
+
+| Frontend | Backend | Database |
+|----------|---------|----------|
+| HTML, CSS | Python (Flask) | SQLite3 |
+
+---
 
 ## 🚀 Getting Started
 
@@ -233,13 +242,14 @@ For support and questions:
 - Open an issue on GitHub
 - Check the documentation
 - Review common troubleshooting steps above
+---
 
-## 🏗️ Built With
+## 🧩 Future Improvements
 
-- **Flask** - Web framework
-- **SQLite** - Database
-- **HTML5/CSS3** - Frontend
-- **JavaScript** - Client-side functionality
+* Add patient search and filters
+* Export reports (PDF/Excel)
+* Role-based login (admin, doctor, receptionist)
+* Appointment tracking and billing module
 
 ---
 
