@@ -258,6 +258,12 @@ For support and questions:
 * Appointment tracking and billing module
 
 ---
+## 🤝 Acknowledgements
+
+This project would not have been possible without the valuable guidance and real-world insights provided by **Ayesha Asalam** (https://www.linkedin.com/in/a-aslam/). Her knowledge of hospital operations helped shape the structure and logic of the system, especially in ensuring the practical flow of patient data handling.  
+
+Thank you for your contribution to making this project more realistic and impactful.
+
 
 **Made with ❤️ for healthcare professionals**
 
