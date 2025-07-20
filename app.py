@@ -171,6 +171,8 @@ def view_patients():
     conn.close()
     
     return render_template('patients.html', patients=patients)
+    
+application = app
 
 if __name__ == '__main__':
     # Initialize database
