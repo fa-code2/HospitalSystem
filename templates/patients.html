@@ -31,6 +31,20 @@
 </head>
 <body>
     <div class="container">
+        <header class="header">
+            <h1>🏥 MediCare Hospital</h1>
+            <p class="subtitle">Patient Record Management System</p>
+        </header>
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="{{ url_for('home') }}" class="nav-link">Home</a></li>
+                <li><a href="{{ url_for('patient_form') }}" class="nav-link active">Add Patient</a></li>
+                <li><a href="{{ url_for('view_patients') }}" class="nav-link">View Records</a></li>
+                <li><a href="#" class="nav-link">Reports</a></li>
+            </ul>
+        </nav>
+    <div class="container">
         <h1>🏥 Patient Records</h1>
 
         <div class="search-filter">
