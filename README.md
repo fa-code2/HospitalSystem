@@ -4,12 +4,12 @@ A comprehensive web-based patient record management system built with Flask and 
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 ![Dashboard Screenshot](assets/screenshot.png)
 
 ---
 
-## ✨ Features
+##  Features
 
 - **Patient Registration**: Complete patient intake form with validation
 - **Patient Records Management**: View, search, and filter patient records
@@ -21,7 +21,7 @@ A comprehensive web-based patient record management system built with Flask and 
 - **Secure Database**: SQLite database with proper data integrity
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Frontend | Backend | Database |
 |----------|---------|----------|
@@ -29,7 +29,7 @@ A comprehensive web-based patient record management system built with Flask and 
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -85,7 +85,7 @@ hospital-patient-record-system/
 └── README.md             # This file
 ```
 
-## 🗄️ Database Schema
+##  Database Schema
 ---
 
 ## BASIC ER Diagram:
@@ -123,7 +123,7 @@ CREATE TABLE patients (
 );
 ```
 
-## 🎯 Usage
+##  Usage
 
 ### Adding a New Patient
 
@@ -150,7 +150,7 @@ CREATE TABLE patients (
 - Complete Address (Address, City, State, ZIP Code)
 - Emergency Contact Information (Name, Relationship, Phone)
 
-## 🛠️ API Endpoints
+## 🛠 API Endpoints
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -158,7 +158,7 @@ CREATE TABLE patients (
 | GET/POST | `/patient_form` | Patient registration form |
 | GET | `/patients` | View all patient records |
 
-## 🔧 Configuration
+##  Configuration
 
 ### Environment Setup
 
@@ -177,7 +177,7 @@ DATABASE_PATH=hospital.db
 - Consider using environment variables for sensitive configuration
 - Implement user authentication for production use
 
-## 🚦 Development
+##  Development
 
 ### Running in Development Mode
 
@@ -195,7 +195,7 @@ The database is automatically initialized when you first run the application. To
 2. Delete `hospital.db` file
 3. Restart the application
 
-## 📋 Features Roadmap
+##  Features Roadmap
 
 - [ ] User authentication and role-based access
 - [ ] Patient appointment scheduling
@@ -206,7 +206,7 @@ The database is automatically initialized when you first run the application. To
 - [ ] Integration with medical devices
 - [ ] Backup and restore functionality
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
@@ -214,11 +214,11 @@ The database is automatically initialized when you first run the application. To
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🆘 Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 
@@ -242,7 +242,7 @@ To view/edit the database directly, you can use SQLite browser tools:
 - [DB Browser for SQLite](https://sqlitebrowser.org/)
 - Command line: `sqlite3 hospital.db`
 
-## 👥 Support
+##  Support
 
 For support and questions:
 - Open an issue on GitHub
@@ -250,7 +250,7 @@ For support and questions:
 - Review common troubleshooting steps above
 ---
 
-## 🧩 Future Improvements
+##  Future Improvements
 
 * Add patient search and filters
 * Export reports (PDF/Excel)
@@ -258,7 +258,7 @@ For support and questions:
 * Appointment tracking and billing module
 
 ---
-## 🤝 Acknowledgements
+##  Acknowledgements
 
 This project would not have been possible without the valuable guidance and real-world insights provided by **Ayesha Asalam** (https://www.linkedin.com/in/a-aslam/). Her knowledge of hospital operations helped shape the structure and logic of the system, especially in ensuring the practical flow of patient data handling.  
 
